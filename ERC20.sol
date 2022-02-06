@@ -3,7 +3,7 @@
 pragma solidity >=0.6.0 <=0.8.11;
 
 import "./Context.sol";
-import "./IERC20JRA.sol";
+import "./IERC20.sol";
 import "./SafeMath.sol";
 
 /**
@@ -23,12 +23,12 @@ contract ERC20 is Context, IERC20 {
     uint8 private _decimals;
 
     /**
-     Sets the values for {name} and {symbol}, initializes {decimals} with a default value of 18.
+     Sets the values for {name} and {symbol}.
      */
     constructor (string memory name_, string memory symbol_) {
         _name = name_;
         _symbol = symbol_;
-        _decimals = 18;
+        _decimals = 4;
     }
 
     /**
